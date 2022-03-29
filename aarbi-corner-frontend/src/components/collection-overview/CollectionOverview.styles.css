@@ -1,0 +1,9 @@
+.collection {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.collection-overview {
+  display: flex;
+  flex-direction: column;
+}

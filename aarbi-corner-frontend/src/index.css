@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:focus ~ .input-text, .shrink{
+  @apply transform -translate-y-8 -translate-x-5 scale-75;
+}

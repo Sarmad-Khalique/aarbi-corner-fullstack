@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 25px;
+}
+
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.options-open{
+  clip-path: circle(1400px at 90% -10%) !important;
+  -webkit-clip-path: circle(1400px at 90% -10%) !important;
+  pointer-events: all !important;
+}

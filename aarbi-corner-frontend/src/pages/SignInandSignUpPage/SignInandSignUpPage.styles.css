@@ -1,0 +1,13 @@
+.sign-in-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 15%;
+  margin: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .sign-in-page {
+    justify-content: space-between;
+  }
+}

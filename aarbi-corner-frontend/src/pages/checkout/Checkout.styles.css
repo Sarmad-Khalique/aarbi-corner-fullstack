@@ -1,0 +1,46 @@
+.checkout-page {
+  padding: 0 1.25rem;
+}
+.checkout-header {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.header-block {
+  width: 50%;
+  padding: 0 0.5rem;
+}
+.header-block:nth-last-child(-n + 2) {
+  width: 25%;
+  text-align: center;
+}
+.empty-cart {
+  border-bottom: 1px solid grey;
+  padding: 1rem;
+  text-align: center;
+}
+.total {
+  line-height: 2.25rem;
+  font-size: 1.875rem;
+  padding: 0.5rem 0;
+  text-align: right;
+}
+.warning {
+  text-align: center;
+  color: rgba(255, 0, 0, 0.767);
+}
+.warning .imp{
+    font-weight: 600;
+}
+.stripe-payment {
+  text-align: right;
+  margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .checkout-page {
+    padding: 0 23%;
+  }
+}
