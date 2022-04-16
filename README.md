@@ -18,3 +18,8 @@ For Frontend:<br />
   1- Navigate to aarbi-corner-frontend<br />
   2- Run "npm install"<br />
   3- Run "npm start"<br />
+
+# Note: Inoreder to run the app as expected you have to add data to backend
+Steps:<br />
+1- Create Super User by running: python manage.py createsuperuser<br />
+2- Adding data to Collection and Collection Item by accessing admin page
