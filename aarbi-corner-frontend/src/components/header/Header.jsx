@@ -23,7 +23,7 @@ import { UserContext } from '../../context/provider/user/user.provider';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const {userLoggedIn, logoutUser} = useContext(UserContext);
+  const {userLoggingState:{loggedIn}, logoutUser} = useContext(UserContext);
   
   const {hidden} = useContext(CartContext);
 
@@ -49,7 +49,7 @@ const Header = () => {
         <LinkOption onClick={() => setMenuOpen(!menuOpen)} to="/shop">
           CONTACT
         </LinkOption>
-        {userLoggedIn ? (
+        {loggedIn ? (
           <LinkOption as="div" onClick={() => logoutUser()}>
             SIGN OUT
           </LinkOption>

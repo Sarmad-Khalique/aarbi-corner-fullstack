@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.contrib.auth.password_validation import validate_password
 
 from shop.models import Collection, CollectionItem
@@ -9,7 +9,7 @@ from shop.models import Collection, CollectionItem
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ("username", "email")
+        fields = ("username", "email", 'first_name', 'last_name')
 
 
 class UserSignUpSerializer(serializers.ModelSerializer):

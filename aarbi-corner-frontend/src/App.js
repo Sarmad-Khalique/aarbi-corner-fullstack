@@ -14,12 +14,12 @@ import SignInandSignUpPage from "./pages/SignInandSignUpPage/SignInandSignUpPage
 import { UserContext } from "./context/provider/user/user.provider";
 
 const App = () => {
-  const {userLoggedIn, checkUserSession} = useContext(UserContext);
+  const {userLoggingState:{loggedIn}, checkUserSession} = useContext(UserContext);
 
   useEffect(()=>{
     console.log("App rendered");
     checkUserSession();
-  },[checkUserSession])
+  },[])
 
   return (
     <div>
@@ -31,7 +31,7 @@ const App = () => {
         <Route
           exact
           path="/signin"
-          render={()=> userLoggedIn ? <Redirect to="/" /> : <SignInandSignUpPage />}
+          render={()=> loggedIn ? <Redirect to="/" /> : <SignInandSignUpPage />}
         />
       </Switch>
     </div>

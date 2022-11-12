@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useState } from "react";
 import { UserContext } from "../../context/provider/user/user.provider";
+import BorderSpinner from "../border-spinner/BorderSpinner.component";
 import CustomButton from "../custom-button/CustomButton";
 import FormInput from "../form-input/FormInput";
 
@@ -13,7 +14,7 @@ import {
 } from "./SignIn.styles";
 
 const SignIn = () => {
-  const { loginUser } = useContext(UserContext);
+  const { loginUser, userLoggingState:{loggingIn} } = useContext(UserContext);
 
   const [userCredentials, setUserCredentials] = useState({
     username: "",
@@ -57,7 +58,9 @@ const SignIn = () => {
           label="Password"
         />
         <ButtonGroup>
-          <CustomButton type="submit">Sign in</CustomButton>
+          <CustomButton type="submit" inverted={loggingIn}>
+            {loggingIn?<BorderSpinner width={"25px"} height={"25px"} />:"Sign In"}
+          </CustomButton>
           <CustomButton
             type="button"
             isGoogleSignIn

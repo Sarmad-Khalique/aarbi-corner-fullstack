@@ -8,12 +8,10 @@ import App from "./App";
 import RootProider from "./context/root-provider";
 
 ReactDOM.render(
-  <React.StrictMode>
     <RootProider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </RootProider>
-  </React.StrictMode>,
+    </RootProider>,
   document.getElementById("root")
 );
